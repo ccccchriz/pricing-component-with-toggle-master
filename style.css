@@ -126,6 +126,11 @@ header > div {
   padding-left: 0rem;
   appearance: none;
   transition: padding-left 0.5s;
+  cursor: pointer;
+}
+
+#timeframe:hover {
+  opacity: 0.7;
 }
 
 #timeframe:checked {
@@ -207,6 +212,13 @@ main {
     hsl(var(--clr-gradient-one)),
     hsl(var(--clr-gradient-two))
   );
+  border: 1px transparent solid;
+}
+
+.card > a:hover {
+  color: hsl(var(--clr-gradient-two));
+  background: hsl(var(--clr-neutral-100));
+  border: 1px hsl(var(--clr-gradient-two)) solid;
 }
 
 .card--color {
@@ -229,6 +241,12 @@ main {
 .card--color > a {
   background: hsl(var(--clr-neutral-100));
   color: hsl(var(--clr-gradient-two));
+}
+
+.card--color > a:hover {
+  color: hsl(var(--clr-neutral-100));
+  background: transparent;
+  border: 1px hsl(var(--clr-neutral-100)) solid;
 }
 
 @media (min-width: 60rem) {

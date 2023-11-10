@@ -86,12 +86,6 @@ body {
   background-color: hsl(var(--clr-neutral-200));
 }
 
-main {
-  display: grid;
-  place-items: center;
-  min-height: 85vh;
-}
-
 /* Header */
 
 header {
@@ -148,10 +142,92 @@ header > div {
   margin: 0 calc(var(--width) / 15);
 }
 
+main {
+  display: grid;
+  place-items: center;
+  min-height: 85vh;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
 /* Cards */
 
 .card {
+  --line-color: var(--clr-neutral-300);
+  min-width: 18rem;
+  background: hsl(var(--clr-neutral-100));
+  border-radius: 10px;
+  padding: 2rem;
   display: grid;
   place-items: center;
   max-width: 20rem;
+}
+
+.card > h3 {
+  font-size: 1rem;
+  color: hsl(var(--clr-neutral-400));
+}
+
+.card > p {
+  color: hsl(var(--clr-neutral-500));
+  font-size: 3.5rem;
+}
+
+.card > p > span {
+  font-size: 2rem;
+  vertical-align: 0.45rem;
+}
+
+.card > ul {
+  width: 100%;
+  display: grid;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 1.5rem 0;
+  border-top: 1px hsl(var(--line-color)) solid;
+}
+
+.card > ul > li {
+  padding: 0.8rem;
+  border-bottom: 1px hsl(var(--line-color)) solid;
+}
+
+.card > a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: hsl(var(--clr-neutral-200));
+  background: linear-gradient(
+    90deg,
+    hsl(var(--clr-gradient-one)),
+    hsl(var(--clr-gradient-two))
+  );
+}
+
+.card--color {
+  background: linear-gradient(
+    160deg,
+    hsl(var(--clr-gradient-one)),
+    hsl(var(--clr-gradient-two))
+  );
+  color: hsl(var(--clr-neutral-100));
+}
+
+.card--color > h3 {
+  color: hsl(var(--clr-neutral-100));
+}
+
+.card--color > p {
+  color: hsl(var(--clr-neutral-100));
+}
+
+.card--color > a {
+  background: hsl(var(--clr-neutral-100));
+  color: hsl(var(--clr-gradient-two));
 }

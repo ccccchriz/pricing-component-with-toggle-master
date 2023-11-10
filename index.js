@@ -7,7 +7,9 @@ const prices = {
 document.getElementById("timeframe").addEventListener("change", (event) => {
   const isMonthly = event.currentTarget.checked;
   Object.keys(prices).forEach((key) => {
-    document.getElementById(`price__${key}`).innerHTML = `&dollar;${
+    document.getElementById(
+      `price__${key}`
+    ).innerHTML = `<span>&dollar;</span>${
       isMonthly ? prices[key].monthly : prices[key].annually
     }`;
   });

@@ -81,22 +81,28 @@ body {
   font-size: var(--fs-base);
 }
 
-header {
-  display: grid;
-  place-items: center;
-  min-height: 15vh;
-}
-
 main {
   display: grid;
   place-items: center;
   min-height: 85vh;
 }
 
-.card {
+/* Header */
+
+header {
   display: grid;
   place-items: center;
-  max-width: 20rem;
+  min-height: 15vh;
+}
+
+header > h2 {
+  color: hsl(var(--clr-neutral-300));
+}
+
+header > div {
+  display: inline-flex;
+  gap: 1rem;
+  color: hsl(var(--clr-neutral-200));
 }
 
 /* 
@@ -105,7 +111,8 @@ main {
 
 #timeframe {
   --width: 3rem;
-  display: inline-flex;
+
+  display: flex;
   align-items: center;
   border-radius: var(--width);
   width: var(--width);
@@ -115,11 +122,14 @@ main {
     hsl(var(--clr-gradient-one)),
     hsl(var(--clr-gradient-two))
   );
+
+  padding-left: 0rem;
   appearance: none;
+  transition: 0.5s;
 }
 
 #timeframe:checked {
-  justify-content: flex-end;
+  padding-left: calc((var(--width) - var(--width) / 15) / 2);
 }
 
 #timeframe::after {
@@ -129,4 +139,12 @@ main {
   border-radius: 50%;
   aspect-ratio: 1;
   margin: 0 calc(var(--width) / 15);
+}
+
+/* Cards */
+
+.card {
+  display: grid;
+  place-items: center;
+  max-width: 20rem;
 }

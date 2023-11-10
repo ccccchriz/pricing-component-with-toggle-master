@@ -195,6 +195,7 @@ main {
 .card > ul > li {
   padding: 0.8rem;
   border-bottom: 1px hsl(var(--line-color)) solid;
+  color: hsl(var(--clr-neutral-400));
 }
 
 .card > a {
@@ -235,6 +236,10 @@ main {
 }
 
 .card--color > p {
+  color: hsl(var(--clr-neutral-100));
+}
+
+.card--color > ul > li {
   color: hsl(var(--clr-neutral-100));
 }
 
